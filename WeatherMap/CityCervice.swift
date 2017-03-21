@@ -38,11 +38,11 @@ class CityService {
         
         if let data = jsonString.data(using: String.Encoding.utf8) {
             let json = JSON(data: data)
-            let country = json["country"].string
+            let country = json["country"].string!
             for item in json["data"].arrayValue {
                 self.cities.append(item.string!)
-                let city = item.string
-                let query = "\(city) \(country)"
+                let city = item.string!
+                let query = "\(city), \(country)"
                 
                 self.placesClient.autocompleteQuery(query, bounds: nil, filter: filter, callback: { (results, error) in
                     if(error != nil) {
@@ -61,7 +61,7 @@ class CityService {
                             return
                         }
                         
-                        var cityInfo = CityInfo(name: city, place: place!, country: country!)
+                        var cityInfo = CityInfo(name: city, place: place!, country: country)
                         
                         self.places.append(cityInfo)
                     })
@@ -82,5 +82,31 @@ class CityService {
     
     func getCities() -> [String] {
         return self.cities
+    }
+    
+    func getNearestCity(coordinate: CLLocationCoordinate2D) -> CityInfo! {
+        if(places.count != cities.count) {
+            return nil
+        }
+        var minDistanceIndex = 0
+        var minDistance = calculateDistance(coordinateA: coordinate, coordinateB: places[minDistanceIndex].place.coordinate)
+        var distance: Float
+        var i = 1
+        while (i < places.count) {
+            distance = calculateDistance(coordinateA: coordinate, coordinateB: places[i].place.coordinate)
+            if(distance < minDistance) {
+                minDistance = distance
+                minDistanceIndex = i
+            }
+            i += 1
+        }
+        return places[minDistanceIndex]
+    }
+    
+    func calculateDistance(coordinateA: CLLocationCoordinate2D, coordinateB: CLLocationCoordinate2D) -> Float {
+        let locationA = CLLocation.init(latitude: coordinateA.latitude, longitude: coordinateA.longitude)
+        let locationB = CLLocation.init(latitude: coordinateB.latitude, longitude: coordinateB.longitude)
+        let result = Float(locationA.distance(from: locationB))
+        return result
     }
 }

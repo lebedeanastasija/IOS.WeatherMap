@@ -7,25 +7,22 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 import GoogleMaps
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var cityTableView: UITableView!
+    var cities: [String] = [String]()
+    var cityService = CityService.ShareInstance
+    
     override func viewDidLoad() {
+        
+        self.cities = cityService.getCities()
+        cityTableView.dataSource = self
+        cityTableView.delegate = self
         super.viewDidLoad()
-        
-        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: 100, height: 100))
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86,
-                                                          longitude: 151.20, zoom: 6)
-        let mapView = GMSMapView.map(withFrame: rect, camera: camera)
-        mapView.isMyLocationEnabled = true
-        self.view = mapView
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
 
     }
 
@@ -34,6 +31,29 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath:  IndexPath) -> UITableViewCell {
+        let cell = self.cityTableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+        
+        let city = self.cities[indexPath.row]
+        cell.cityLabel.text = city
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \(indexPath.row).")
+        tabBarController?.selectedIndex = 1
+        let cell = self.cityTableView.cellForRow(at: indexPath) as! CityTableViewCell
+        let name = cell.cityLabel.text
+        (tabBarController?.viewControllers?[1] as! SecondViewController).chooseCity(name: name!)
+    }
 }
 

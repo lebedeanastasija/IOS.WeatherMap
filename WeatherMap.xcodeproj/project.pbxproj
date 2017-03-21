@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3A7A6953D619282AB8961E2E /* Pods_WeatherMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6344D995641374BC1791AB65 /* Pods_WeatherMap.framework */; };
+		D0709DAB1E81D004005C01C6 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0709DAA1E81D004005C01C6 /* WeatherService.swift */; };
+		D0709DAD1E81D536005C01C6 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0709DAC1E81D536005C01C6 /* CityTableViewCell.swift */; };
 		D08B53081E7E8E9800EAC3D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B53071E7E8E9800EAC3D6 /* AppDelegate.swift */; };
 		D08B530A1E7E8E9800EAC3D6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B53091E7E8E9800EAC3D6 /* FirstViewController.swift */; };
 		D08B530C1E7E8E9800EAC3D6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B530B1E7E8E9800EAC3D6 /* SecondViewController.swift */; };
@@ -17,12 +19,19 @@
 		D0F987471E7EBA300033E74B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F987461E7EBA300033E74B /* Alamofire.framework */; };
 		D0F987491E7EBA360033E74B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F987481E7EBA360033E74B /* SwiftyJSON.framework */; };
 		D0F9874B1E7EBA890033E74B /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F9874A1E7EBA890033E74B /* GoogleMapsBase.framework */; };
+		D0F987511E7FA6D90033E74B /* City.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F987501E7FA6D90033E74B /* City.json */; };
+		D0F987531E7FA7270033E74B /* CityCervice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F987521E7FA7270033E74B /* CityCervice.swift */; };
+		D0F987551E7FA7B00033E74B /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F987541E7FA7B00033E74B /* ApiConfig.swift */; };
+		D0F987571E7FA8EE0033E74B /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F987561E7FA8EE0033E74B /* CityInfo.swift */; };
+		D0F987591E7FA9250033E74B /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F987581E7FA9250033E74B /* GooglePlaces.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E5852AED3A7007239D828FF /* Pods-WeatherMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherMap/Pods-WeatherMap.debug.xcconfig"; sourceTree = "<group>"; };
 		6344D995641374BC1791AB65 /* Pods_WeatherMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB412CFC041BCF1AE57A842 /* Pods-WeatherMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherMap/Pods-WeatherMap.release.xcconfig"; sourceTree = "<group>"; };
+		D0709DAA1E81D004005C01C6 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		D0709DAC1E81D536005C01C6 /* CityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		D08B53041E7E8E9800EAC3D6 /* WeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08B53071E7E8E9800EAC3D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D08B53091E7E8E9800EAC3D6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +43,11 @@
 		D0F987461E7EBA300033E74B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/WeatherMap-brhbxppexxckcmfxnlsbudzirhvp/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		D0F987481E7EBA360033E74B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/WeatherMap-brhbxppexxckcmfxnlsbudzirhvp/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D0F9874A1E7EBA890033E74B /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Pods/GoogleMaps/Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		D0F987501E7FA6D90033E74B /* City.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = City.json; sourceTree = "<group>"; };
+		D0F987521E7FA7270033E74B /* CityCervice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityCervice.swift; sourceTree = "<group>"; };
+		D0F987541E7FA7B00033E74B /* ApiConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		D0F987561E7FA8EE0033E74B /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		D0F987581E7FA9250033E74B /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Pods/GooglePlaces/Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F987591E7FA9250033E74B /* GooglePlaces.framework in Frameworks */,
 				D0F9874B1E7EBA890033E74B /* GoogleMapsBase.framework in Frameworks */,
 				D0F987491E7EBA360033E74B /* SwiftyJSON.framework in Frameworks */,
 				D0F987471E7EBA300033E74B /* Alamofire.framework in Frameworks */,
@@ -88,6 +103,12 @@
 				D08B53101E7E8E9800EAC3D6 /* Assets.xcassets */,
 				D08B53121E7E8E9800EAC3D6 /* LaunchScreen.storyboard */,
 				D08B53151E7E8E9800EAC3D6 /* Info.plist */,
+				D0F987501E7FA6D90033E74B /* City.json */,
+				D0F987521E7FA7270033E74B /* CityCervice.swift */,
+				D0F987541E7FA7B00033E74B /* ApiConfig.swift */,
+				D0F987561E7FA8EE0033E74B /* CityInfo.swift */,
+				D0709DAA1E81D004005C01C6 /* WeatherService.swift */,
+				D0709DAC1E81D536005C01C6 /* CityTableViewCell.swift */,
 			);
 			path = WeatherMap;
 			sourceTree = "<group>";
@@ -95,6 +116,7 @@
 		E46F992AF74377F6C973D1DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0F987581E7FA9250033E74B /* GooglePlaces.framework */,
 				D0F9874A1E7EBA890033E74B /* GoogleMapsBase.framework */,
 				D0F987481E7EBA360033E74B /* SwiftyJSON.framework */,
 				D0F987461E7EBA300033E74B /* Alamofire.framework */,
@@ -167,6 +189,7 @@
 			files = (
 				D08B53141E7E8E9800EAC3D6 /* LaunchScreen.storyboard in Resources */,
 				D08B53111E7E8E9800EAC3D6 /* Assets.xcassets in Resources */,
+				D0F987511E7FA6D90033E74B /* City.json in Resources */,
 				D08B530F1E7E8E9800EAC3D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,9 +249,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F987531E7FA7270033E74B /* CityCervice.swift in Sources */,
 				D08B530C1E7E8E9800EAC3D6 /* SecondViewController.swift in Sources */,
 				D08B53081E7E8E9800EAC3D6 /* AppDelegate.swift in Sources */,
+				D0F987551E7FA7B00033E74B /* ApiConfig.swift in Sources */,
+				D0F987571E7FA8EE0033E74B /* CityInfo.swift in Sources */,
 				D08B530A1E7E8E9800EAC3D6 /* FirstViewController.swift in Sources */,
+				D0709DAD1E81D536005C01C6 /* CityTableViewCell.swift in Sources */,
+				D0709DAB1E81D004005C01C6 /* WeatherService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +381,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleMaps/Base/Frameworks",
+					"$(PROJECT_DIR)/Pods/GooglePlaces/Frameworks",
 				);
 				INFOPLIST_FILE = WeatherMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -370,6 +399,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleMaps/Base/Frameworks",
+					"$(PROJECT_DIR)/Pods/GooglePlaces/Frameworks",
 				);
 				INFOPLIST_FILE = WeatherMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

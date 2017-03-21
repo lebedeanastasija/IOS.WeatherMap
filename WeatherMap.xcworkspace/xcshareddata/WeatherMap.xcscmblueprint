@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "49D290EE219A4B9DC846CCEDCA31AA45087A39B9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "49D290EE219A4B9DC846CCEDCA31AA45087A39B9" : 9223372036854775807,
+    "0A903EA50F1CC53D1CDBA7C6774A59D185D9302A" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4A6EE626-21F8-45BB-B0B8-833E0EFA5A2E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "49D290EE219A4B9DC846CCEDCA31AA45087A39B9" : "WeatherMap\/",
+    "0A903EA50F1CC53D1CDBA7C6774A59D185D9302A" : "..\/RPO.l2\/FriendAndWeather"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WeatherMap",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WeatherMap.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lebedeanastasija\/IOS.FriendsAndWeather.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0A903EA50F1CC53D1CDBA7C6774A59D185D9302A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lebedeanastasija\/IOS.WeatherMap.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "49D290EE219A4B9DC846CCEDCA31AA45087A39B9"
+    }
+  ]
+}
